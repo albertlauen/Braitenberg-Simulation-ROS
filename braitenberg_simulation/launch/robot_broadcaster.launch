@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <!-- BUILD THE URDF-->
+  <param name="diff_drive_description" command="$(find xacro)/xacro --inorder '$(find braitenberg_simulation)/models/broadcast_bot/diff_drive.xacro'"/>
+
+  <!-- BEGIN ROBOT 1-->
+  <group ns="robot_broadcaster">
+    <param name="tf_prefix" value="robot10_tf" />
+    <include file="$(find braitenberg_simulation)/launch/one_robot_broadcaster.launch" >
+      <arg name="init_pose" value="-x -20 -y -5 -z 1" />
+      <arg name="robot_name"  value="robot_broadcaster" />
+    </include>
+  </group>
+</launch>

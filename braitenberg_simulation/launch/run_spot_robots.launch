@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <node name="speed_controller1" pkg="braitenberg_simulation" type="braitenberg_spot_1.py" />
+  <node name="speed_controller2" pkg="braitenberg_simulation" type="braitenberg_spot_2.py" />
+  <node name="speed_controller3" pkg="braitenberg_simulation" type="braitenberg_spot_3.py" />
+</launch>
