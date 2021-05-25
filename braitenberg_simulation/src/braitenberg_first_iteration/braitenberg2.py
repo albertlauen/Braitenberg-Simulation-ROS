@@ -22,8 +22,8 @@ def newOdom (msg):
     (roll, pitch, theta) = euler_from_quaternion ([rot_q.x, rot_q.y, rot_q.z, rot_q.w])
 
 rospy.init_node('speed_controller2')
-sub = rospy.Subscriber('/robot1/odom', Odometry, newOdom)
-pub = rospy.Publisher('/robot1/cmd_vel', Twist, queue_size=1)
+sub = rospy.Subscriber('/robot2/odom', Odometry, newOdom)
+pub = rospy.Publisher('/robot2/cmd_vel', Twist, queue_size=1)
 speed = Twist()
 r = rospy.Rate(10)
 

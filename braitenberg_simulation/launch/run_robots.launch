@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
   <node name="speed_controller1" pkg="braitenberg_simulation" type="braitenberg1.py" />
-  <node name="robot1_transform" pkg="braitenberg_simulation" type="robot_transform_node1.py" />
-   <!--<node name="speed_controller2" pkg="braitenberg_simulation" type="braitenberg2.py" />
+  <node name="speed_controller2" pkg="braitenberg_simulation" type="braitenberg2.py" />
   <node name="speed_controller3" pkg="braitenberg_simulation" type="braitenberg3.py" />
   <node name="speed_controller4" pkg="braitenberg_simulation" type="braitenberg4.py" />
   <node name="speed_controller5" pkg="braitenberg_simulation" type="braitenberg5.py" />
@@ -10,15 +9,4 @@
   <node name="speed_controller7" pkg="braitenberg_simulation" type="braitenberg7.py" />
   <node name="speed_controller8" pkg="braitenberg_simulation" type="braitenberg8.py" />
   <node name="speed_controller9" pkg="braitenberg_simulation" type="braitenberg9.py" />
- node name="speed_controller_broadcaster" pkg="braitenberg_simulation" type="move_broadcaster.py" />
-
-  <node name="robot2_transform" pkg="braitenberg_simulation" type="robot_transform_node2.py" />
-  <node name="robot3_transform" pkg="braitenberg_simulation" type="robot_transform_node3.py" />
-  <node name="robot4_transform" pkg="braitenberg_simulation" type="robot_transform_node4.py" />
-  <node name="robot5_transform" pkg="braitenberg_simulation" type="robot_transform_node5.py" />
-  <node name="robot6_transform" pkg="braitenberg_simulation" type="robot_transform_node6.py" />
-  <node name="robot7_transform" pkg="braitenberg_simulation" type="robot_transform_node7.py" />
-  <node name="robot8_transform" pkg="braitenberg_simulation" type="robot_transform_node8.py" />
-  <node name="robot9_transform" pkg="braitenberg_simulation" type="robot_transform_node9.py" />
-  <node name="robot10_transform" pkg="braitenberg_simulation" type="robot_transform_broadcaster.py" /> -->
 </launch>

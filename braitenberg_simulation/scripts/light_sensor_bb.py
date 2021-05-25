@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 import rospy
 import numpy as np
 from nav_msgs.msg import Odometry
@@ -21,16 +20,12 @@ def newOdom (msg):
     rot_q = msg.pose.pose.orientation
     (roll, pitch, theta) = euler_from_quaternion ([rot_q.x, rot_q.y, rot_q.z, rot_q.w])
 
-rospy.init_node('speed_controller1')
-sub = rospy.Subscriber('/odom', Odometry, newOdom)
-pub = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
+rospy.init_node('speed_controller2')
+sub = rospy.Subscriber('/robot1/odom', Odometry, newOdom)
+pub = rospy.Publisher('/robot1/cmd_vel', Twist, queue_size=1)
 speed = Twist()
 r = rospy.Rate(10)
 
 while not rospy.is_shutdown():
-    gradient = m*(-x_bot)/100
-    if -3.14 <= theta <= 3.14:
-        speed.linear.x = np.clip(abs((gradient)/(theta+0.01)),-1,1)
-        speed.angular.z = np.clip(((gradient)/(theta+0.01)),-1,1)
     pub.publish(speed)
     r.sleep()
