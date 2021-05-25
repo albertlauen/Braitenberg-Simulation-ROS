@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>  
+  <arg name="robot_name"/>
+  <include file="$(find mini_cheetah_config)/launch/spawn_robot.launch">
+  </include>
+  <!-- Publish the TFs -->
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" >
+    <remap from="robot_description" to="diff_drive_description" />
+  </node>
+</launch>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>  
+	<node name="Braitenberg_light" pkg="braitenberg_simulation" type="bb_light.py" />
+	<node name="Camera1" pkg="braitenberg_simulation" type="camera1_copy.py" />
+	<node name="Camera2" pkg="braitenberg_simulation" type="camera2_copy.py" />
+</launch>
